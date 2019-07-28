@@ -28,6 +28,8 @@ The implementation of C3D in Keras was forked from [here](https://github.com/axo
 
 The implementation of I3D in Keras was forked from [here](https://github.com/dlpbc/keras-kinetics-i3d).
 
+The weights of I3D were obtained from [here](https://github.com/dlpbc/keras-kinetics-i3d) and are under [Apache-2.0 License](https://github.com/deepmind/kinetics-i3d/blob/master/LICENSE).
+
 # Requirements
 
 Install the latest versions of Tensorflow, Keras, and Opencv. You may also need to install Numpy, Matplotlib, Pandas, and Sklearn.
