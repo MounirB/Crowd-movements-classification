@@ -26,9 +26,7 @@ The implementation of C3D in Keras was forked from [here](https://github.com/axo
 }
 ```
 
-The implementation of I3D in Keras was forked from [here](https://github.com/dlpbc/keras-kinetics-i3d).
-
-The weights of I3D were obtained from [here](https://github.com/dlpbc/keras-kinetics-i3d) and are under [Apache-2.0 License](https://github.com/deepmind/kinetics-i3d/blob/master/LICENSE).
+The implementation of I3D in Keras was forked from [here](https://github.com/dlpbc/keras-kinetics-i3d). According to the authors of the [keras-kinetics-i3d](https://github.com/dlpbc/keras-kinetics-i3d) repository, the weights of I3D, that we provide in the `Data/` folder, were obtained from [here](https://github.com/dlpbc/keras-kinetics-i3d) and are under [Apache-2.0 License](https://github.com/deepmind/kinetics-i3d/blob/master/LICENSE).
 
 # Requirements
 
