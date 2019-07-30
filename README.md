@@ -1,6 +1,7 @@
 # Crowd movements classification
 
-This project is used for the classification of 10 crowd movements illustrated in the Crowd-11 dataset. The 11th class is intended for empty scenes.
+This is the companion repository for our paper titled "Transfer learning for the classification of video-recorded crowd movements" accepted for presentation at the [11th Int'l Symposium on Image and Signal Processing (ISPA2019)](https://www.isispa.org/home).
+The project is about the classification of 10 crowd movements illustrated in the Crowd-11 dataset. The 11th class is intended for empty scenes.
 Three different architectures are employed for the classification : 
 - The C3D architecture. Namely the 3D ConvNets that is presented in the following article : [Learning Spatiotemporal Features with 3D Convolutional Networks](https://arxiv.org/pdf/1412.0767.pdf).
 ```
