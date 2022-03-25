@@ -236,8 +236,6 @@ def train(model_type, training_condition, split_number, models_folder, model_wei
         workers=workers,
         use_multiprocessing=use_multiprocessing
     )
-    # save model
-    model.save(models_folder+model_type+training_condition+split_number+'.hdf5')
 
 
 def main(args):

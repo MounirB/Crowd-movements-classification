@@ -117,6 +117,8 @@ def evaluate(model_type, trained_model_path, data_folder, batch_size):
     # model.compile(optimizer=Adam(lr=1e-4, decay=1e-6), loss='categorical_crossentropy', metrics=['accuracy'])
     model.compile(optimizer=SGD(lr=0.003), loss='categorical_crossentropy', metrics=['accuracy'])
 
+    test_steps = len(test_data)//batch_size
+
     # Evaluate the model
     if model_type == 'C3D':
         print("C3D model creation :")
@@ -125,7 +127,7 @@ def evaluate(model_type, trained_model_path, data_folder, batch_size):
                                          sample_input.shape,
                                          nb_classes,
                                          batch_size=batch_size)
-        [loss, acc] = model.evaluate_generator(video_test_generator, steps=1000, max_queue_size=10, workers=1,
+        [loss, acc] = model.evaluate_generator(video_test_generator, steps=test_steps, max_queue_size=10, workers=1,
                                                use_multiprocessing=False, verbose=1)
     elif model_type == 'I3D':
         print("I3D model creation :")
@@ -135,7 +137,7 @@ def evaluate(model_type, trained_model_path, data_folder, batch_size):
                                          sample_input.shape,
                                          nb_classes,
                                          batch_size=batch_size)
-        [loss, acc] = model.evaluate_generator(video_test_generator, steps=1000, max_queue_size=10, workers=1,
+        [loss, acc] = model.evaluate_generator(video_test_generator, steps=test_steps, max_queue_size=10, workers=1,
                                                use_multiprocessing=False, verbose=1)
     else: # TWOSTREAM_I3D
         print("TWOSTREAM_I3D model creation :")
@@ -145,7 +147,7 @@ def evaluate(model_type, trained_model_path, data_folder, batch_size):
                                          sample_input.shape,
                                          nb_classes,
                                          batch_size=batch_size)
-        [loss, acc] = model.evaluate_generator(video_test_generator, steps=1000, max_queue_size=10, workers=1,
+        [loss, acc] = model.evaluate_generator(video_test_generator, steps=test_steps, max_queue_size=10, workers=1,
                                                use_multiprocessing=False, verbose=1)
 
     # Print the evaluation results
